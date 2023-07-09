@@ -46,10 +46,8 @@ export default class Proficiency extends Component {
                 </div>
                 </div>
             </div>
-            <div>
-            <br></br>
-            &nbsp;
             </div>
+            <div className="row row-pt-md">
             <div className="col-md-4 text-center animate-box">
                 <div className="services color-4">
                 <span className="icon">

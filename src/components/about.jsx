@@ -12,7 +12,7 @@ export default class About extends Component {
                         <div className="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
                             <div className="col-md-12">
                                 <div className="about-desc">
-                                    <span className="heading-meta">About Us</span>
+                                    <span className="heading-meta">About Me</span>
                                     <h2 className="colorlib-heading">Who Am I?</h2>
                                     <p>Recent college graduate with exceptional communication, writing, and collaborative skills seeking to apply himself in front-end software and product development to enhance the user experience.</p>
                                     <p>I built this site to showcase my work and experience. Take a look!</p>

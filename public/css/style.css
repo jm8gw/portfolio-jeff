@@ -1488,6 +1488,7 @@ body.offcanvas {
   bottom: -10px; }
 
 .colorlib-nav-toggle.active i {
+  top: 20px;
   background: transparent; }
 
 .colorlib-nav-toggle.active i::before {
@@ -1509,7 +1510,7 @@ body.offcanvas {
 .colorlib-nav-toggle {
   position: fixed;
   left: -5px;
-  top: 0px;
+  top: 20px;
   z-index: 9999;
   cursor: pointer;
   opacity: 1;

@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 export default class Education extends Component {
+  
+  handleClick = () => {
+    window.location.href = 'https://doi.org/10.18130/t75h-m186'; 
+  };
   render() {
     return (
       <div>
@@ -31,7 +35,8 @@ export default class Education extends Component {
                           <div className="col-md-12">
                             <p>Charlottesville, VA | August 2019 to May 2023</p>
                             
-                            <h4>BS in Computer Science, Minor in Drama, 3.7 GPA, graduated with High Distinction</h4>
+                            <h4 style={{ marginBottom: '3px' }}>BS in Computer Science, Minor in Drama, 3.7 GPA, graduated with High Distinction</h4>
+                            <button class="btn-hover color-9" onClick={this.handleClick}>See Published Thesis<i className="icon-arrow-right-thick" /></button>
                           </div>
                         </div>
         <div className="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
@@ -87,7 +92,7 @@ export default class Education extends Component {
                     <div className="col-md-12">
                       
                       
-                      <h4><strong>Vice President of Programming, Risk Management & Housing</strong> | Pi Lambda Phi Fraternity | Jan 2022 - Jan 2023 </h4>
+                      <h4 style={{ marginBottom: '15px' }}><strong>Vice President of Programming, Risk Management & Housing</strong> | Pi Lambda Phi Fraternity | Jan 2022 - Jan 2023 </h4>
                         <li>Organized 5+ major fraternity social and professional development events per month, some with 150+ guests, with an emphasis on risk management and enforcement of fraternity-wide safety practices</li>
                         <li>Delegated event preparation tasks to a 12 person committee</li>
                         <li>Maintained exemplary condition of the primary fraternity residence housing 15 fraternity members</li>
@@ -95,7 +100,7 @@ export default class Education extends Component {
                       
                       <br></br>
                       
-                      <h4><strong>Assistant Director </strong> | Spectrum Theatre | Aug - Nov 2021 </h4>
+                      <h4 style={{ marginBottom: '15px' }}><strong>Assistant Director </strong> | Spectrum Theatre | Aug - Nov 2021 </h4>
                         <li>Casted and directed 18 cast members for the Believer: A Cult Musical show</li>
                         <li>Led acting exercises and rehearsals, blocked and choreographed scenes, and gave note</li>
                       

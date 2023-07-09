@@ -24,7 +24,7 @@ export default function GreystonesModal() {
         <CardActionArea onClick={handleOpen}>
             <div className="con">
                 <h3><a href="work.html">Greystones Maritime Inc.</a></h3>
-                <span>Fully developed and easy-to-navigate official company website for Greystones Maritime International, complete with animated components and a functioning contact form. 
+                <span>Fully developed the easy-to-navigate official company website for Greystones Maritime International, complete with animated components and a functioning contact form. 
 												<br></br> Built in JavaScript, CSS, and HTML.</span>
 								<p className="icon">
                     <span><a href="#"><i className="icon" />HTML</a></span>
@@ -71,7 +71,7 @@ export default function GreystonesModal() {
               </Grid>
             </Grid>
             
-            <span id="spring-modal-description">Fully developed and easy-to-navigate official company website for Greystones Maritime International, complete with animated components and a functioning contact form.<br />Built in JavaScript, CSS, and HTML.</span>
+            <span id="spring-modal-description">Fully developed the easy-to-navigate official company website for Greystones Maritime International, complete with animated components and a functioning contact form.<br />Built in JavaScript, CSS, and HTML.</span>
             <br></br>
             <br></br>
 			<h5 style={{marginBottom:-1}}>HTML · CSS · JavaScript · Bootstrap · User Experience (UX) · Web Design</h5>							

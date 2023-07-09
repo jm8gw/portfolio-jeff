@@ -48,7 +48,7 @@ export default class Timeline extends Component {
                       </div>
                       <div className="timeline-label">
                         <h2><a href="https://www.lumastic.com" data-nav-section="projects">Software Development Intern at Lumastic · Internship</a> <span>Charlottesville, Virginia, United States, Jun 2021 - Aug 2021</span></h2>
-                        <li>Supported a small startup company of 5 virtually over the summer on their platform, Lumastic.com, built to provide a collaboration space for those within the content creation community </li>
+                        <li>Supported a small startup company virtually over the summer on their platform, Lumastic.com, built to provide a collaboration space for those within the content creation community </li>
                         <li>Created and implemented an updated notification page with read/unread markers</li>
                         <li>Built tests for existing features to make sure everything worked as intended in regard to the design specifications and user feedback from 40 beta testers</li>
                         
