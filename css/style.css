@@ -303,7 +303,8 @@ figure {
           font-weight: 700; }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner h1 {
-              font-size: 28px; } }
+              font-size: 42px; 
+              margin-bottom: 400px; } }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 {
           font-size: 18px;
           line-height: 1.5;
@@ -335,10 +336,16 @@ figure {
           #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
             color: #000;
             border: 1px solid #000;
-            background: transparent !important; }
+            background: transparent; }
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
               background: transparent !important;
               border: 1px solid #000 !important; }
+            @media screen and (max-width: 768px) {
+              #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn {
+                background: rgba(255, 255, 255, 0.726);
+                backdrop-filter: blur(5px); } 
+              #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn.btn-learn:hover {
+                border: 1px solid #fff !important} }
           @media screen and (max-width: 768px) {
             #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
               width: 100%; } }
