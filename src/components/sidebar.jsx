@@ -39,7 +39,7 @@ export default class Sidebar extends Component {
             
             <div className="colorlib-footer">
               <p><small>
-              © 2023 Jeffrey Mouritzen. All rights reserved. Inspired by Colorlib
+              © 2023 Jeffrey Mouritzen. All rights reserved. Inspired by Colorlib.
               </small></p>
             </div>
             
