@@ -36,7 +36,7 @@ export default class Education extends Component {
                             <p>Charlottesville, VA | August 2019 to May 2023</p>
                             
                             <h4 style={{ marginBottom: '3px' }}>BS in Computer Science, Minor in Drama, 3.7 GPA, graduated with High Distinction</h4>
-                            <button class="btn-hover color-9" onClick={this.handleClick}>See Published Thesis<i className="icon-arrow-right-thick" /></button>
+                            <button className="btn-hover color-9" onClick={this.handleClick}>See Published Thesis</button>
                           </div>
                         </div>
         <div className="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">

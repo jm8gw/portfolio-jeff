@@ -5,7 +5,7 @@ export default class Sidebar extends Component {
     return (
       <div>
         <div>
-          <nav href="#navbar" className="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i /></nav>
+          <nav href="#navbar" className="js-colorlib-nav-toggle colorlib-nav-toggle" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i /></nav>
           <aside id="colorlib-aside" role="complementary" className="border js-fullheight">
             <div className="text-center">
               <div className="author-img" style={{backgroundImage: 'url(images/JeffCompositeLeftSqr.jpg)'}} />
@@ -36,14 +36,13 @@ export default class Sidebar extends Component {
                 <li><a href="https://www.facebook.com/jeffrey.mouritzen/" target="_blank"><i className="icon-facebook2" /></a></li>
               </ul>
             </nav>
-            {/*
+            
             <div className="colorlib-footer">
               <p><small>
-                  Made with <i className="icon-heart" aria-hidden="true" /> and <i className="icon-beer" aria-hidden="true"></i><br></br>
-                  Thanks <a href="https://colorlib.com" target="_blank">Colorlib</a> for inspiration 
+              © 2023 Jeffrey Mouritzen. All rights reserved. Inspired by Colorlib
               </small></p>
             </div>
-            */}
+            
           </aside>
         </div>
       </div>

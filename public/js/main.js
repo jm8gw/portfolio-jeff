@@ -140,7 +140,7 @@
 			
 	    	}
 		});
-
+		
 	};
 
 	var clickMenu = function() {
