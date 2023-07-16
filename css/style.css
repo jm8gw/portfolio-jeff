@@ -388,8 +388,8 @@ body.offcanvas {
 .colorlib-about,
 .colorlib-services,
 .colorlib-contact {
-  padding-top: 3em;
-  padding-bottom: 5em;
+  padding-top: 2em;
+  padding-bottom: 3em;
   clear: both;
   width: 100%;
   display: block; }
@@ -402,8 +402,8 @@ body.offcanvas {
     .colorlib-about,
     .colorlib-services,
     .colorlib-contact {
-      padding-top: 5em;
-      padding-bottom: 8em; } }
+      padding-top: 1.5em;
+      padding-bottom: 2.5em; } }
 
 .author-img {
   background-size: cover;
@@ -1167,6 +1167,10 @@ body.offcanvas {
   background-size: cover;
   background-attachment: fixed;
   background-position: center center; }
+  @media screen and (max-width: 768px) {
+    .colorlib-counters {
+      background-size: 70%;
+      background-repeat: no-repeat; } }
   .colorlib-counters .overlay {
     z-index: 0;
     position: absolute;
