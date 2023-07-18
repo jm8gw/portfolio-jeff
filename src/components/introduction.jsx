@@ -7,7 +7,7 @@ export default class Introduction extends Component {
         <section id="colorlib-hero" className="js-fullheight" data-section="home">
           <div className="flexslider js-fullheight">
             <ul className="slides">
-              <li style={{backgroundImage: 'url(images/beach3.jpg)'}}>
+              <li style={{backgroundImage: 'url(images/beach6.jpg)'}}>
                 <div className="overlay" />
                 <div className="container-fluid">
                   <div className="row">
