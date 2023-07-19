@@ -19,20 +19,41 @@ export default function NozamaModal() {
     window.location.href = 'http://nozama.com/'; 
   };
 
+  const [height, setHeight] = React.useState('67%');
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setHeight('33%');
+      } else {
+        setHeight('67%');
+      }
+    };
+
+    handleResize(); // Set initial height
+
+    window.addEventListener('resize', handleResize); // Update height on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
+  }, []);
+
+
   return (
     <div>
         <CardActionArea onClick={handleOpen}>
             <div className="con">
-                <h3><a href="work.html">Nozama: Virtual Bookstore</a></h3>
+                <h3><a>Nozama: Virtual Bookstore</a></h3>
                 <span>Developed a bookstore-themed mock e-commerce web application designed to utilize the NY Times public API to display book catalogs, which a user may add to a shopping cart to "purchase".
 						<br></br>				
                         Built using React and Express, and hosted using Heroku.</span>
                 <p className="icon">
-                    <span><a href="#"><i className="icon" />React.js</a></span>
-                    <span><a href="#"><i className="icon" />Express.js</a></span>
-                    <span><a href="#"><i className="icon" />CSS</a></span>
-                    <span><a href="#"><i className="icon" />Firestore</a></span>
-                    <span><a href="#"><i className="icon" />Heroku</a></span>
+                    <span><a  ><i className="icon" />React.js</a></span>
+                    <span><a  ><i className="icon" />Express.js</a></span>
+                    <span><a  ><i className="icon" />CSS</a></span>
+                    <span><a  ><i className="icon" />Firestore</a></span>
+                    <span><a  ><i className="icon" />Heroku</a></span>
                 </p>
             </div>
         </CardActionArea>
@@ -99,7 +120,7 @@ export default function NozamaModal() {
 		    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTlHtxCGEuvan_SPRCNeG3Prkd0jauoBytR_2gnUceHuqVrqxtMunXbQq6JUwFIV0gydV2H4m3XfISA/embed?start=true&loop=true&delayms=6000" 
                 frameborder="0" 
                 width='100%' 
-                height='67%' 
+                height={height} 
                 allowfullscreen="true" 
                 mozallowfullscreen="true" 
                 webkitallowfullscreen="true">
@@ -107,11 +128,11 @@ export default function NozamaModal() {
             
             <br></br>
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <h1 id="spring-modal-title" style={{ marginBottom: 3 }}>Nozama: Virtual Bookstore</h1>
-                <p>Jul 2022 - Aug 2022</p>
+                <p style={{ marginBottom: 0 }}>Jul 2022 - Aug 2022</p>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <button class="btn-hover color-2" onClick={handleClick}>VISIT <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
@@ -245,5 +266,8 @@ const style = (theme) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
   boxShadow: 16,
   overflow: 'auto',
+  '@media (max-width: 768px)': {
+    width: '85%',
+  },
 });
 

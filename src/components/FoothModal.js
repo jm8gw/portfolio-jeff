@@ -19,18 +19,38 @@ export default function FoothModal() {
     window.location.href = 'https://www.youtube.com/watch?v=etjvdmZ6wUg&ab_channel=PalashShah'; 
   };
 
+  const [height, setHeight] = React.useState('67%');
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setHeight('33%');
+      } else {
+        setHeight('67%');
+      }
+    };
+
+    handleResize(); // Set initial height
+
+    window.addEventListener('resize', handleResize); // Update height on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
+  }, []);
+
   return (
     <div>
         <CardActionArea onClick={handleOpen}>
             <div className="con">
-                <h3><a href="work.html">Footh: The Ultimate Mobile Recipe App</a></h3>
+                <h3><a>Footh: The Ultimate Mobile Recipe App</a></h3>
                 <span>Developed a mobile app designed to allow users to upload and search for unique food inspirations and recipes. 
                     <br></br>Built using React Native, with a Firestore database. Deployed using Expo.</span>
                 <p className="icon">
-                    <span><a href="#"><i className="icon" />React Native</a></span>
-                    <span><a href="#"><i className="icon" />Expo</a></span>
-                    <span><a href="#"><i className="icon" />Firestore</a></span>
-                    <span><a href="#"><i className="icon" />Mobile App</a></span>
+                    <span><a  ><i className="icon" />React Native</a></span>
+                    <span><a  ><i className="icon" />Expo</a></span>
+                    <span><a  ><i className="icon" />Firestore</a></span>
+                    <span><a  ><i className="icon" />Mobile App</a></span>
                 </p>
             </div>
         </CardActionArea>
@@ -49,7 +69,7 @@ export default function FoothModal() {
 		    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ_wNNZLZiDRZP18PagLmuldl3Yj81HMojFIi2kVd-1MMH1ADBZ44EEr_UoSsdo3gicgWmDfBX5u9T7/embed?start=true&loop=true&delayms=6000" 
                 frameborder="0" 
                 width='100%' 
-                height='67%' 
+                height={height} 
                 allowfullscreen="true" 
                 mozallowfullscreen="true" 
                 webkitallowfullscreen="true">
@@ -57,11 +77,11 @@ export default function FoothModal() {
             
             <br></br>
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <h1 id="spring-modal-title" style={{ marginBottom: 3 }}>Footh: The Ultimate Mobile Recipe App</h1>
-                <p style={{ fontSize: 11 }}>Aug 2021 - Dec 2021</p>
+                <p style={{ fontSize: 11, marginBottom: 0 }}>Aug 2021 - Dec 2021</p>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <button class="btn-hover color-4" onClick={handleClick}>DEMO<i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
@@ -194,5 +214,8 @@ const style = (theme) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
   boxShadow: 16,
   overflow: 'auto',
+  '@media (max-width: 768px)': {
+    width: '85%',
+  },
 });
 

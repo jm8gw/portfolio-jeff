@@ -9,7 +9,7 @@ export default class Proficiency extends Component {
             <div className="row">
             <div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
                 <span className="heading-meta">What do I do?</span>
-                <h2 className="colorlib-heading">Here are some of my areas of expertise</h2>
+                <h2 className="colorlib-heading">Here are some areas of expertise I can offer:</h2>
             </div>
             </div>
             <div className="row row-pt-md">

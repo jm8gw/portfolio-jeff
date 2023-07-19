@@ -10,7 +10,7 @@ export default class Contact extends Component {
         <div className="colorlib-narrow-content">
           <div className="row">
             <div className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
-              <span className="heading-meta">Get in Touch</span>
+              <span className="heading-meta">Want to see me in action? Get in Touch!</span>
               <h2 className="colorlib-heading">Contact</h2>
             </div>
           </div>

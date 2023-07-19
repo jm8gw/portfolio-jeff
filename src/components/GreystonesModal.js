@@ -19,17 +19,38 @@ export default function GreystonesModal() {
     window.location.href = 'https://www.greystonesinc.com'; 
   };
 
+  const [height, setHeight] = React.useState('67%');
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setHeight('33%');
+      } else {
+        setHeight('67%');
+      }
+    };
+
+    handleResize(); // Set initial height
+
+    window.addEventListener('resize', handleResize); // Update height on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
+  }, []);
+
+
   return (
     <div>
         <CardActionArea onClick={handleOpen}>
             <div className="con">
-                <h3><a href="work.html">Greystones Maritime Inc.</a></h3>
+                <h3><a>Greystones Maritime Inc.</a></h3>
                 <span>Fully developed the easy-to-navigate official company website for Greystones Maritime International, complete with animated components and a functioning contact form. 
 												<br></br> Built in JavaScript, CSS, and HTML.</span>
 								<p className="icon">
-                    <span><a href="#"><i className="icon" />HTML</a></span>
-                    <span><a href="#"><i className="icon" />CSS</a></span>
-                    <span><a href="#"><i className="icon" />JavaScript</a></span>
+                    <span><a  ><i className="icon" />HTML</a></span>
+                    <span><a  ><i className="icon" />CSS</a></span>
+                    <span><a  ><i className="icon" />JavaScript</a></span>
                 </p>
             </div>
         </CardActionArea>
@@ -48,7 +69,7 @@ export default function GreystonesModal() {
 		    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQE3rgPfGY-FYJvmepLVAOzlxL8bphVSBrN7O1j2X_E_9OjJ98lKvcYmmp3nRmc9e-NJ7ywIV2oPV-s/embed?start=true&loop=true&delayms=15000" 
                 frameborder="0" 
                 width='100%' 
-                height='67%' 
+                height={height} //67
                 allowfullscreen="true" 
                 mozallowfullscreen="true" 
                 webkitallowfullscreen="true">
@@ -61,12 +82,16 @@ export default function GreystonesModal() {
 								<br></br> Built in JavaScript, CSS, and HTML.</span>
             <aside>  <button class="btn-hover color-9">BUTTON</button> </aside>
             */}
+            {/*
+              xs={8}
+              xs={4}
+             */}
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}> 
                 <h1 id="spring-modal-title" style={{ marginBottom: 3 }}>Greystones Maritime Inc.</h1>
-                <p>Aug 2021 - Sep 2021</p>
+                <p style={{ marginBottom: 0 }}>Aug 2021 - Sep 2021</p>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <button class="btn-hover color-9" onClick={handleClick}>VISIT <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
@@ -199,5 +224,8 @@ const style = (theme) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
   boxShadow: 16,
   overflow: 'auto',
+  '@media (max-width: 768px)': {
+    width: '85%',
+  },
 });
 

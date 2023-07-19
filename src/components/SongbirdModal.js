@@ -19,19 +19,39 @@ export default function SongbirdModal() {
     window.location.href = 'https://docs.google.com/presentation/d/1CjYz4mPqRhKsO-CFIBxkAXCOOKHC3Ljh95ottju4isM/edit?usp=sharing'; 
   };
 
+  const [height, setHeight] = React.useState('67%');
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setHeight('33%');
+      } else {
+        setHeight('67%');
+      }
+    };
+
+    handleResize(); // Set initial height
+
+    window.addEventListener('resize', handleResize); // Update height on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
+  }, []);
+
   return (
     <div>
         <CardActionArea onClick={handleOpen}>
             <div className="con">
-                <h3><a href="work.html">Spotify Songbird: A Social Media Web App Extension of Spotify</a></h3>
+                <h3><a>Spotify Songbird: A Social Media Web App Extension of Spotify</a></h3>
 											<span>Developed a web application that provides a social media extension of Spotify, allowing for better social engagement around the music we listen to. 
 												<br></br>Built using React, Express, Firebase, and the publicly available Spotify API. Deployed temporarily using Heroku.</span>
 								<p className="icon">
-                    <span><a href="#"><i className="icon" />React.js</a></span>
-                    <span><a href="#"><i className="icon" />Express.js</a></span>
-                    <span><a href="#"><i className="icon" />OAuth</a></span>
-                    <span><a href="#"><i className="icon" />Firestore</a></span>
-                    <span><a href="#"><i className="icon" />Spotify API</a></span>
+                    <span><a  ><i className="icon" />React.js</a></span>
+                    <span><a  ><i className="icon" />Express.js</a></span>
+                    <span><a  ><i className="icon" />OAuth</a></span>
+                    <span><a  ><i className="icon" />Firestore</a></span>
+                    <span><a  ><i className="icon" />Spotify API</a></span>
                 </p>
             </div>
         </CardActionArea>
@@ -50,7 +70,7 @@ export default function SongbirdModal() {
 		    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR0j9kZaaVIdXNtZwLKJ2Aj8rz6fYHlCiyZ-Xnkb16Zw5bN3GHeHJtzvZO-Kw5xi0tNJQssJvTnBBAn/embed?start=true&loop=true&delayms=6000" 
                 frameborder="0" 
                 width='100%' 
-                height='67%' 
+                height={height}
                 allowfullscreen="true" 
                 mozallowfullscreen="true" 
                 webkitallowfullscreen="true">
@@ -58,11 +78,11 @@ export default function SongbirdModal() {
             
             <br></br>
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <h1 id="spring-modal-title" style={{ marginBottom: 3 }}>Spotify Songbird: A Social Media Extension of Spotify</h1>
-                <p style={{ fontSize: 11 }}>Jun 2022 - Jul 2022</p>
+                <p style={{ fontSize: 11, marginBottom: 0 }}>Jun 2022 - Jul 2022</p>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <button class="btn-hover color-6" onClick={handleClick}>SLIDES<i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
@@ -195,5 +215,8 @@ const style = (theme) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
   boxShadow: 16,
   overflow: 'auto',
+  '@media (max-width: 768px)': {
+    width: '85%',
+  },
 });
 

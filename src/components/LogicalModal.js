@@ -19,19 +19,39 @@ export default function LogicalModal() {
     window.location.href = 'https://logicalbuildings.com/business/'; 
   };
 
+  const [height, setHeight] = React.useState('67%');
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setHeight('33%');
+      } else {
+        setHeight('67%');
+      }
+    };
+
+    handleResize(); // Set initial height
+
+    window.addEventListener('resize', handleResize); // Update height on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
+  }, []);
+
   return (
     <div>
         <CardActionArea onClick={handleOpen}>
             <div className="con">
-                <h3><a href="work.html">Logical Buildings</a></h3>
+                <h3><a>Logical Buildings</a></h3>
                 <span>Helped develop and test the Logical Buildings web application while working at Ballast Lane Applications. 
 												<br></br> Built in Angular, translated to React.</span>
 								<p className="icon">
-                    <span><a href="#"><i className="icon" />React.js</a></span>
-                    <span><a href="#"><i className="icon" />Cypress.js</a></span>
-                    <span><a href="#"><i className="icon" />HighCharts</a></span>
-                    <span><a href="#"><i className="icon" />HTML</a></span>
-                    <span><a href="#"><i className="icon" />CSS</a></span>
+                    <span><a  ><i className="icon" />React.js</a></span>
+                    <span><a  ><i className="icon" />Cypress.js</a></span>
+                    <span><a  ><i className="icon" />HighCharts</a></span>
+                    <span><a  ><i className="icon" />HTML</a></span>
+                    <span><a  ><i className="icon" />CSS</a></span>
                 </p>
             </div>
         </CardActionArea>
@@ -50,7 +70,7 @@ export default function LogicalModal() {
 		    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTY02ZwHLlWA7FirT5Rie4HJj6XsS3RNKmVAIs2K7ixiqdQrkTJ6AlOUmObEBSThUXpLuoEK7th-UiF/embed?start=true&loop=true&delayms=3000" 
                 frameborder="0" 
                 width='100%' 
-                height='67%' 
+                height={height} 
                 allowfullscreen="true" 
                 mozallowfullscreen="true" 
                 webkitallowfullscreen="true">
@@ -58,11 +78,11 @@ export default function LogicalModal() {
             
             <br></br>
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}> 
                 <h1 id="spring-modal-title" style={{ marginBottom: 3 }}>Logical Buildings</h1>
-                <p>Jun 2022 - Aug 2022</p>
+                <p style={{ marginBottom: 0 }}>Jun 2022 - Aug 2022</p>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <button class="btn-hover color-12" onClick={handleClick}>VISIT <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
@@ -196,5 +216,8 @@ const style = (theme) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
   boxShadow: 16,
   overflow: 'auto',
+  '@media (max-width: 768px)': {
+    width: '85%',
+  },
 });
 

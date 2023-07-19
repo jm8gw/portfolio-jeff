@@ -19,20 +19,40 @@ export default function LumasticModal() {
     window.location.href = 'https://www.lumastic.com'; 
   };
 
+  const [height, setHeight] = React.useState('67%');
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 767) {
+        setHeight('33%');
+      } else {
+        setHeight('67%');
+      }
+    };
+
+    handleResize(); // Set initial height
+
+    window.addEventListener('resize', handleResize); // Update height on window resize
+
+    return () => {
+      window.removeEventListener('resize', handleResize); // Clean up event listener on component unmount
+    };
+  }, []);
+
 
   return (
     <div>
         <CardActionArea onClick={handleOpen}>
             <div className="con">
-                <h3><a href="work.html">Lumastic</a></h3>
+                <h3><a>Lumastic</a></h3>
                 <span>A collaborative online digital workspace built for creators, by creators. 
 												<br></br> Built in JavaScript, CSS, and HTML.</span>
 								<p className="icon">
-                    <span><a href="#"><i className="icon" />JavaScript</a></span>
-                    <span><a href="#"><i className="icon" />CSS</a></span>
-                    <span><a href="#"><i className="icon" />HTML</a></span>
-                    <span><a href="#"><i className="icon" />Redux</a></span>
-                    <span><a href="#"><i className="icon" />Docker</a></span>
+                    <span><a  ><i className="icon" />JavaScript</a></span>
+                    <span><a  ><i className="icon" />CSS</a></span>
+                    <span><a  ><i className="icon" />HTML</a></span>
+                    <span><a  ><i className="icon" />Redux</a></span>
+                    <span><a  ><i className="icon" />Docker</a></span>
                 </p>
             </div>
         </CardActionArea>
@@ -51,7 +71,7 @@ export default function LumasticModal() {
 		    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTDikbGuU3iBuTsdDbZtldtoX3GJg6nrw7oEPyoJre682XG-_kGL5ub4JEiC_vyWfxlADXqlMrkw4pX/embed?start=true&loop=true&delayms=3000"  
                 frameborder="0" 
                 width='100%' 
-                height='67%' 
+                height={height}
                 allowfullscreen="true" 
                 mozallowfullscreen="true" 
                 webkitallowfullscreen="true">
@@ -59,11 +79,11 @@ export default function LumasticModal() {
             
             <br></br>
             <Grid container spacing={2} alignItems="center">
-              <Grid item xs={8}>
+              <Grid item xs={12} md={8}>
                 <h1 id="spring-modal-title" style={{ marginBottom: 3 }}>Lumastic</h1>
-                <p>Jun 2021 - Aug 2021</p>
+                <p style={{ marginBottom: 0 }}>Jun 2021 - Aug 2021</p>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item xs={12} md={4}>
                 <button class="btn-hover color-13" onClick={handleClick}>VISIT <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
@@ -198,5 +218,8 @@ const style = (theme) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#0A1929' : 'white',
   boxShadow: 16,
   overflow: 'auto',
+  '@media (max-width: 768px)': {
+    width: '85%',
+  },
 });
 
