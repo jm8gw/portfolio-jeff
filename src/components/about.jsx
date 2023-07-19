@@ -48,7 +48,7 @@ export default class About extends Component {
                         <div className="row">
                             <div className="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                 <div className="hire">
-                                <h2>Excited to take on my next challenge!</h2>
+                                <h2>Here to Take Your Project to the Next Level!</h2>
                                 <div className="btn-fuckyou">
                                     <Button className="btn-hire" id="contactmerightthefucknow">Let's Chat</Button>
                                 </div>
