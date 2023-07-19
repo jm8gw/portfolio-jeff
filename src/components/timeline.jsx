@@ -17,8 +17,7 @@ export default class Timeline extends Component {
                 <div className="timeline-centered">
                   <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
                     <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-3">
-                        <i className="icon-pen2" />
+                      <div className="timeline-icon color-2">
                       </div>
                       <div className="timeline-label">
                         <h2><a href="https://www.ballastlane.com/" data-nav-section="projects">Software Engineer at Ballast Lane Applications, LLC · Internship</a> <span>Medellín, Antioquia, Colombia, Jun 2022 - Aug 2022</span></h2>
@@ -31,7 +30,7 @@ export default class Timeline extends Component {
                   <article className="timeline-entry animate-box" data-animate-effect="fadeInTop">
                     <div className="timeline-entry-inner">
                       <div className="timeline-icon color-4">
-                        <i className="icon-pen2" />
+                        
                       </div>
                       <div className="timeline-label">
                         <h2><a href="https://www.greystonesinc.com" data-nav-section="projects">Web Developer at Greystones Maritime International, Inc. · Freelance</a> <span>Dulles, Virginia, United States, Aug 2021 - Sep 2021</span></h2>
@@ -44,7 +43,7 @@ export default class Timeline extends Component {
                   <article className="timeline-entry animate-box" data-animate-effect="fadeInLeft">
                     <div className="timeline-entry-inner">
                       <div className="timeline-icon color-5">
-                        <i className="icon-pen2" />
+                        
                       </div>
                       <div className="timeline-label">
                         <h2><a href="https://www.lumastic.com" data-nav-section="projects">Software Development Intern at Lumastic · Internship</a> <span>Charlottesville, Virginia, United States, Jun 2021 - Aug 2021</span></h2>

@@ -587,13 +587,22 @@ body.offcanvas {
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon i {
     color: #fff; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-2 {
-    background: #ec5453; }
+    /*background: #ec5453; */
+    background-image: url('../images/blalogo2.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-3 {
     background: #f9bf3f; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-4 {
-    background: #a84cb8; }
+    /*background: #a84cb8;*/
+    background-image: url('../images/greystoneslogoblack.png');
+    background-size: cover; 
+    background-repeat: no-repeat; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-5 {
-    background: #2fa499; }
+    /*background: #2fa499;*/
+    background-image: url('../images/lumasticlogo1.png');
+    background-size: cover; 
+    background-repeat: no-repeat; }
   .timeline-centered .timeline-entry .timeline-entry-inner .timeline-icon.color-none {
     background: #fff;
     width: 20px;
