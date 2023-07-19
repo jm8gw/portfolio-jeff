@@ -16,7 +16,8 @@ export default function NozamaModal() {
   const handleClose = () => setOpen(false);
 
   const handleClick = () => {
-    window.location.href = 'http://nozama.com/'; 
+    //window.location.href = 'http://nozama.com/'; 
+    window.location.href = 'https://github.com/jazzyboii/book-app';
   };
 
   const [height, setHeight] = React.useState('67%');
@@ -133,7 +134,7 @@ export default function NozamaModal() {
                 <p style={{ marginBottom: 0 }}>Jul 2022 - Aug 2022</p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button class="btn-hover color-2" onClick={handleClick}>VISIT <i className="icon-arrow-right-thick" /></button>
+                <button class="btn-hover color-2" onClick={handleClick}>SEE THE CODE <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
             <span id="spring-modal-description" >Developed a bookstore-themed mock e-commerce web application designed to utilize the NY Times public API to display book catalogs, which a user may add to a shopping cart to "purchase".

@@ -16,7 +16,8 @@ export default function SongbirdModal() {
   const handleClose = () => setOpen(false);
 
   const handleClick = () => {
-    window.location.href = 'https://docs.google.com/presentation/d/1CjYz4mPqRhKsO-CFIBxkAXCOOKHC3Ljh95ottju4isM/edit?usp=sharing'; 
+    //window.location.href = 'https://docs.google.com/presentation/d/1CjYz4mPqRhKsO-CFIBxkAXCOOKHC3Ljh95ottju4isM/edit?usp=sharing'; 
+    window.location.href = 'https://github.com/Ananya-Ananda/Spotify-Project';
   };
 
   const [height, setHeight] = React.useState('67%');
@@ -83,7 +84,7 @@ export default function SongbirdModal() {
                 <p style={{ fontSize: 11, marginBottom: 0 }}>Jun 2022 - Jul 2022</p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button class="btn-hover color-6" onClick={handleClick}>SLIDES<i className="icon-arrow-right-thick" /></button>
+                <button class="btn-hover color-6" onClick={handleClick}>SEE THE CODE <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
             <span id="spring-modal-description" >Developed a web application that provides a social media extension of Spotify, allowing users to display songs on their public profile, explore other profiles, engage in forum discussions with other users, and discover/review their own listening habits. 

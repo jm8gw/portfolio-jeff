@@ -82,7 +82,7 @@ export default function FoothModal() {
                 <p style={{ fontSize: 11, marginBottom: 0 }}>Aug 2021 - Dec 2021</p>
               </Grid>
               <Grid item xs={12} md={4}>
-                <button class="btn-hover color-4" onClick={handleClick}>DEMO<i className="icon-arrow-right-thick" /></button>
+                <button class="btn-hover color-4" onClick={handleClick}>WATCH THE DEMO <i className="icon-arrow-right-thick" /></button>
               </Grid>
             </Grid>
             <span id="spring-modal-description" >Developed a mobile app designed to allow users to upload and search for unique food inspirations and recipes. 
