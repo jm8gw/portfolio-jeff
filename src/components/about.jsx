@@ -25,6 +25,7 @@ export default class About extends Component {
                                 </div>
                             </div>
                         </div>
+                        {/*
                         <div className="row">
                             <div className="col-md-3 animate-box" data-animate-effect="fadeInLeft">
                                 <div className="services color-1">
@@ -51,6 +52,7 @@ export default class About extends Component {
                                 </div>
                             </div>
                         </div>
+                        */}
                         <div className="row">
                             <div className="col-md-12 animate-box" data-animate-effect="fadeInLeft">
                                 <div className="hire">
