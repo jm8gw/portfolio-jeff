@@ -31,7 +31,7 @@ export default class Proficiency extends Component {
                 </span>
                 <div className="desc">
                     <h3>Dev Ops</h3>
-                    <p>Heroku, Docker, VirtualBox, Ubuntu, GitHub, VS Code, Visual Studio, Eclipse IDE, pyCharm</p>
+                    <p>Heroku, cPanel, Docker, VirtualBox, Ubuntu, GitHub, VS Code, Visual Studio, Eclipse IDE, pyCharm</p>
                 </div>
                 </div>
             </div>

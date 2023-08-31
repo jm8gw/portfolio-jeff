@@ -12,6 +12,7 @@ export default class Sidebar extends Component {
               <h1 id="colorlib-logo"><a href="index.html">Jeffrey Mouritzen</a></h1>
               <span className="email"><i className="icon-mail"></i> jeffreymouritzen@gmail.com</span>
               <span className="number"><i className="icon-phone"></i> (703) 624-3320</span>
+              <a className="btn btn-sm btn-resume" href="https://drive.google.com/file/d/11Qv4Xm4uLy9l5mK7M48VJcsEPAPnb52e/view?usp=sharing">See Resumé <i className="icon-arrow-right3" style={{ fontSize: '10px' }}/></a>
             </div>
             <nav id="colorlib-main-menu" role="navigation" className="navbar">
               <div id="navbar" className="collapse">

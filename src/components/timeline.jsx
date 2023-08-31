@@ -33,9 +33,9 @@ export default class Timeline extends Component {
                         
                       </div>
                       <div className="timeline-label">
-                        <h2><a href="https://www.greystonesinc.com" data-nav-section="projects">Web Developer at Greystones Maritime International, Inc. · Freelance</a> <span>Dulles, Virginia, United States, Aug 2021 - Sep 2021</span></h2>
+                        <h2><a href="https://www.greystonesmaritime.com" data-nav-section="projects">Web Developer at Greystones Maritime International, Inc. · Freelance</a> <span>Dulles, Virginia, United States, Aug 2021 - Sep 2021</span></h2>
                         <li>Built the official Greystones Maritime International website based on design specifications and content provided by Greystones </li>
-                        <li>Launched the website via GitHub: https://greystonesinc.com</li>
+                        <li>Launched the website at https://greystonesmaritime.com</li>
                         
                       </div>
                     </div>

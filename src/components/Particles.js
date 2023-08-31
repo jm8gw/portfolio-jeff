@@ -70,9 +70,9 @@ function Particle() {
         },
         "particles": {
             "color": {
-                value: ["#12c2e9", "#c471ed", "#f64f59"],
-                            animation: {
-                    enable: true,
+                value: ["#2c98f0"], //["#12c2e9", "#c471ed", "#f64f59"]
+                            animation: { 
+                    enable: true, //change to false if you want just the colors above
                     speed: 40,
                     sync: false
                 }

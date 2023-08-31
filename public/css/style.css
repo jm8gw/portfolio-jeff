@@ -107,7 +107,7 @@ figure {
     font-size: 12px;}
   #colorlib-aside .number {
     display: block;
-    margin-bottom: 2em;
+    margin-bottom: 4px;
     font-size: 12px;}  
   #colorlib-aside #colorlib-logo {
     text-align: right;
@@ -1364,6 +1364,23 @@ body.offcanvas {
     border: 2px solid #2c98f0; }
     .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
       background: #2c98f0;
+      color: #fff; }
+
+.btn-resume {
+  margin-bottom: 8px;
+  vertical-align: middle;
+  background: transparent;
+  color: #000;
+  border: 1px solid #000; }
+  .btn-resume:hover, .btn-resume:focus, .btn-resume:active {
+    background: #e2e2e2 !important;
+    border-color: #c9c9c9 !important; }
+  .btn-resume.btn-outline {
+    background: transparent;
+    color: #c9c9c9;
+    border: 2px solid #c9c9c9; }
+    .btn-resume.btn-outline:hover, .btn-resume.btn-outline:focus, .btn-resume.btn-outline:active {
+      background: #c9c9c9;
       color: #fff; }
 
 .btn-success {

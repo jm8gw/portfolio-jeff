@@ -16,7 +16,7 @@ export default function GreystonesModal() {
   const handleClose = () => setOpen(false);
 
   const handleClick = () => {
-    window.location.href = 'https://www.greystonesinc.com'; 
+    window.location.href = 'https://www.greystonesmaritime.com'; 
   };
 
   const [height, setHeight] = React.useState('67%');
