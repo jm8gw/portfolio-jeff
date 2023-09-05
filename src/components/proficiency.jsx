@@ -66,7 +66,7 @@ export default class Proficiency extends Component {
                 </span>
                 <div className="desc">
                     <h3>Testing</h3>
-                    <p>Selenium, Cypress.js, Jest</p>
+                    <p>Selenium, JUnit, Cypress.js, Jest</p>
                 </div>
                 </div>
             </div>
